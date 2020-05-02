@@ -1,10 +1,10 @@
-# godot-addon-firebase
+# Firebase Plugin for Godot 3
 Godot Addon for Firebase
 
 I will implement the features of Google Firebase on the way, as I need them or they are requested by the community
 
-If you wish to support this project, you can find my Patreon here https://patreon.com/diurnalproductions
-and my Ko-fi here: https://ko-fi.com/kyleszklenski
+If you wish to support this project, you can find my Patreon here https://patreon.com/
+and my Ko-fi here: https://ko-fi.com/
 
 ### Implementations
 - Auth
@@ -24,7 +24,9 @@ and my Ko-fi here: https://ko-fi.com/kyleszklenski
 2. Once the app has been created, add a web app to it [Here](https://firebase.google.com/docs/web/setup)
 	- Only do Step 1 and 2
 
-3. This will show a series of values called "config". These must be set to the plugin as Dictionary  / Exmaple Code:
+3. This will show a series of values called "config". These must be set to the plugin as Dictionary
+
+You can save the config as json and load it / Exmaple Code:
 ```
 var file = File.new()
 var err = file.open("res://firebase-config.json", file.READ)
