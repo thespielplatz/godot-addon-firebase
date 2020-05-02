@@ -10,6 +10,8 @@ func _ready():
 	Firebase.Auth.connect("sign_in_succeeded", self, "_on_sign_in_succeeded")
 	Firebase.Auth.connect("response_error", self, "_on_response_error")
 	Firebase.Auth.connect("user_data", self, "_on_user_data")
+	
+	Firebase.Auth.sign_in_anonymously()
 
 func loadConfigFromJSON():
 	var file = File.new()
@@ -36,7 +38,7 @@ func _on_AuthAnonymously_pressed():
 
 func _on_sign_in_succeeded(auth):
 	print("Login Succeeded")
-	print(auth)
+	# print(auth)
 
 func _on_GetUserData_pressed():
 	Firebase.Auth.get_user_data()
@@ -47,3 +49,10 @@ func _on_user_data(userdata):
 
 func _on_RefreshToken_pressed():
 	Firebase.Auth.refresh_token()
+
+
+func _on_ListDocuments_pressed():
+	Firebase.Firestore.get_documents("(default)", "restaurants", funcref(self, "documentslist"))
+	
+func documentslist(list):
+	print(list)

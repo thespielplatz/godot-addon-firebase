@@ -20,6 +20,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ListDocuments" type="Button" parent="."]
+margin_left = 306.0
+margin_top = 91.0
+margin_right = 519.0
+margin_bottom = 130.0
+text = "List Documents"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="GetUserData" type="Button" parent="."]
 margin_left = 33.0
 margin_top = 89.0
@@ -39,6 +49,15 @@ text = "Refresh Token"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 286.0
+margin_top = 30.0
+margin_right = 498.0
+margin_bottom = 55.0
+text = "Firestore"
+align = 1
 [connection signal="pressed" from="AuthAnonymously" to="." method="_on_AuthAnonymously_pressed"]
+[connection signal="pressed" from="ListDocuments" to="." method="_on_ListDocuments_pressed"]
 [connection signal="pressed" from="GetUserData" to="." method="_on_GetUserData_pressed"]
 [connection signal="pressed" from="RefreshToken" to="." method="_on_RefreshToken_pressed"]
