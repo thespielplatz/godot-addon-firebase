@@ -1,9 +1,5 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var firebaseConfig
 
 # Called when the node enters the scene tree for the first time.
@@ -11,8 +7,9 @@ func _ready():
 	loadConfigFromJSON()
 	
 	Firebase.set_config(firebaseConfig)
-	
-	pass # Replace with function body.
+	Firebase.Auth.connect("sign_in_succeeded", self, "_on_sign_in_succeeded")
+	Firebase.Auth.connect("response_error", self, "_on_response_error")
+	Firebase.Auth.connect("user_data", self, "_on_user_data")
 
 func loadConfigFromJSON():
 	var file = File.new()
@@ -30,13 +27,23 @@ func loadConfigFromJSON():
 	print("Loaded Firebase Config")
 	print(firebaseConfig)
 
-func _on_AuthAnonymously_pressed():
-	Firebase.Auth.connect("login_succeeded", self, "_on_login_succeeded")
-	Firebase.Auth.connect("login_failed", self, "_on_login_failed")
-	Firebase.Auth.login_anonymously()
 
-func _on_login_succeeded(auth):
+func _on_response_error(code, message):
+	print("Response Error: " + str(code) + " | " + message)
+
+func _on_AuthAnonymously_pressed():
+	Firebase.Auth.sign_in_anonymously()
+
+func _on_sign_in_succeeded(auth):
 	print("Login Succeeded")
-	
-func _on_login_failed(code, message):
-	print("Login Failed Code: " + str(code) + " | " + message)
+	print(auth)
+
+func _on_GetUserData_pressed():
+	Firebase.Auth.get_user_data()
+
+func _on_user_data(userdata):
+	print("User Data Recieved")
+	print(userdata)
+
+func _on_RefreshToken_pressed():
+	Firebase.Auth.refresh_token()

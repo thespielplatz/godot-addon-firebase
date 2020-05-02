@@ -1,6 +1,8 @@
 extends Node
 
 const FirebaseAuth = preload("res://addons/tsp_gp_firebase/FirebaseAuth.gd")
+const FirebaseUser = preload("res://addons/tsp_gp_firebase/FirebaseUser.gd")
+
 onready var Auth : FirebaseAuth = FirebaseAuth.new()
 onready var Firestore = Node.new()
 

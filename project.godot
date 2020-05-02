@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "FirebaseAuth",
 "language": "GDScript",
 "path": "res://addons/tsp_gp_firebase/FirebaseAuth.gd"
+}, {
+"base": "Node",
+"class": "FirebaseUser",
+"language": "GDScript",
+"path": "res://addons/tsp_gp_firebase/FirebaseUser.gd"
 } ]
 _global_script_class_icons={
-"FirebaseAuth": ""
+"FirebaseAuth": "",
+"FirebaseUser": ""
 }
 
 [application]

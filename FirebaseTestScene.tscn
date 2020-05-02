@@ -16,4 +16,29 @@ margin_top = 28.0
 margin_right = 246.0
 margin_bottom = 67.0
 text = "Auth Anonymously"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GetUserData" type="Button" parent="."]
+margin_left = 33.0
+margin_top = 89.0
+margin_right = 246.0
+margin_bottom = 128.0
+text = "Get User Data"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RefreshToken" type="Button" parent="."]
+margin_left = 34.0
+margin_top = 147.0
+margin_right = 247.0
+margin_bottom = 186.0
+text = "Refresh Token"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="AuthAnonymously" to="." method="_on_AuthAnonymously_pressed"]
+[connection signal="pressed" from="GetUserData" to="." method="_on_GetUserData_pressed"]
+[connection signal="pressed" from="RefreshToken" to="." method="_on_RefreshToken_pressed"]
