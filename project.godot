@@ -8,15 +8,29 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "HTTPRequest",
+"class": "FirebaseAuth",
+"language": "GDScript",
+"path": "res://addons/tsp_gp_firebase/FirebaseAuth.gd"
+} ]
 _global_script_class_icons={
-
+"FirebaseAuth": ""
 }
 
 [application]
 
 config/name="FirebaseExample"
+run/main_scene="res://FirebaseTestScene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Firebase="*res://addons/tsp_gp_firebase/Firebase.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "tsp_gp_firebase" )
 
 [rendering]
 

@@ -3,13 +3,42 @@ Godot Addon for Firebase
 
 I will implement the features of Google Firebase on the way, as I need them or they are requested by the community
 
+If you wish to support this project, you can find my Patreon here https://patreon.com/diurnalproductions
+and my Ko-fi here: https://ko-fi.com/kyleszklenski
+
 ### Implementations
 - Auth
-- - Anonymous Auth
-- Firestore
-- - list
-- - push
+	- Anonymous Auth
 
 ## Install & Configuration
 
-## HowTo
+1. Copy the folder **addons/tsp_gp_firebase** to the project path res://addons/
+2. Open your Project Settings
+3. Go to Plugins
+4. Activate the TSP GodotPlugin Firebase
+5. From there, you will have an autoload singleton with the variables 
+
+## Creating A Firebase Web App 
+1. Create a Firebase App / Guide: [Here](https://firebase.google.com/docs/projects/learn-more#setting_up_a_firebase_project_and_connecting_apps)
+
+2. Once the app has been created, add a web app to it [Here](https://firebase.google.com/docs/web/setup)
+	- Only do Step 1 and 2
+
+3. This will show a series of values called "config". These must be set to the plugin as Dictionary  / Exmaple Code:
+```
+var file = File.new()
+var err = file.open("res://firebase-config.json", file.READ)
+var json = file.get_as_text()
+var config = parse_json(json)
+Firebase.set_config(config)
+```
+4. Check the section about Firebase Authentification
+
+#### Firebase Authentification 
+
+For **Anonymous Login**: Goto your Firebase Console / Authentication / Sign-In Method and enbale *Anonymous*
+
+
+## Code Examples
+
+yeah I know / Please check out the sample project!
