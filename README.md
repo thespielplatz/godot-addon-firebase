@@ -5,10 +5,10 @@ I will implement the features of Google Firebase on the way, as I need them or t
 
 ### Implementations
 - Auth
--- Anonymous Auth
+- - Anonymous Auth
 - Firestore
--- list
--- push
+- - list
+- - push
 
 ## Install & Configuration
 
