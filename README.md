@@ -1,10 +1,12 @@
 # Firebase Plugin for Godot 3
-Godot Addon for Firebase
+Godot 3.x Plugin for Firebase/Fire
 
 I will implement the features of Google Firebase on the way, as I need them or they are requested by the community
 
-If you wish to support this project, you can find my Patreon here https://patreon.com/
-and my Ko-fi here: https://ko-fi.com/
+Did you use my code and and it worked without problems? You could ...
+<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#f2a500', 'T6T31O7TS');kofiwidget2.draw();</script> 
+
+// you can find my Patreon here https://patreon.com/
 
 ### Implementations
 - Auth
