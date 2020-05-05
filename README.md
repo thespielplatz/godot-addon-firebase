@@ -1,4 +1,4 @@
-# Firebase Plugin for Godot 3
+# Firebase Plugin for Godot 3 / NOT STABLE AND SOMEWHERE
 Godot 3.x Plugin for Firebase
 
 I will implement the features of Google Firebase on the way, as I need them or they are requested by the community
